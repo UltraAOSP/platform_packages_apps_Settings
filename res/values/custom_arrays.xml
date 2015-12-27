@@ -17,18 +17,19 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Buttons -->
-    <string-array name="hardware_keys_action_entries" translatable="false">
-        <item>@string/hardware_keys_action_nothing</item>
-        <item>@string/hardware_keys_action_menu</item>
-        <item>@string/hardware_keys_action_app_switch</item>
-        <item>@string/hardware_keys_action_search</item>
-        <item>@string/hardware_keys_action_voice_search</item>
-        <item>@string/hardware_keys_action_in_app_search</item>
-        <item>@string/hardware_keys_action_launch_camera</item>
-        <item>@string/hardware_keys_action_last_app</item>
+    <string-array name="action_entries" translatable="false">
+        <item>@string/action_nothing</item>
+        <item>@string/action_menu</item>
+        <item>@string/action_app_switch</item>
+        <item>@string/action_search</item>
+        <item>@string/action_voice_search</item>
+        <item>@string/action_in_app_search</item>
+        <item>@string/action_launch_camera</item>
+        <item>@string/action_last_app</item>
+        <item>@string/action_splitscreen</item>
     </string-array>
- 
-    <string-array name="hardware_keys_action_values" translatable="false">
+
+    <string-array name="action_values" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
@@ -37,7 +38,8 @@
         <item>5</item>
         <item>6</item>
         <item>7</item>
-    </string-array>    
+        <item>8</item>
+    </string-array>
 
     <!-- LED color list -->
     <string-array name="entries_led_colors" translatable="false">
