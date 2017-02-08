@@ -128,7 +128,12 @@ public class AppOpsDetails extends InstrumentedFragment {
                         entry.getSwitchText(mState));
                 ((TextView)view.findViewById(R.id.op_time)).setText(
                         entry.getTimeText(res, true));
-                Switch sw = (Switch)view.findViewById(R.id.switchWidget);
+
+                Spinner sp = (Spinner) view.findViewById(R.id.spinnerWidget);
+                sp.setVisibility(View.GONE);
+                Switch sw = (Switch) view.findViewById(R.id.switchWidget);
+                sw.setVisibility(View.GONE);
+
                 final int switchOp = AppOpsManager.opToSwitch(firstOp.getOp());
                 sw.setChecked(mAppOps.checkOp(switchOp, entry.getPackageOps().getUid(),
                         entry.getPackageOps().getPackageName()) == AppOpsManager.MODE_ALLOWED);
