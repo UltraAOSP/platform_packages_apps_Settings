@@ -66,6 +66,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_SELINUX_STATUS = "selinux_status";
     private static final String KEY_BASEBAND_VERSION = "baseband_version";
     private static final String KEY_FIRMWARE_VERSION = "firmware_version";
+    private static final String KEY_AOST_VERSION = "aost_version";
     private static final String KEY_CAF_VERSION = "caf_version";
     private static final String KEY_SECURITY_PATCH = "security_patch";
     private static final String KEY_UPDATE_SETTING = "additional_system_update_settings";
@@ -106,6 +107,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
 
         setStringSummary(KEY_FIRMWARE_VERSION, Build.VERSION.RELEASE);
         findPreference(KEY_FIRMWARE_VERSION).setEnabled(true);
+
+        setValueSummary(KEY_AOST_VERSION, "ro.aost.version");
 
         setValueSummary(KEY_CAF_VERSION, "ro.caf.version");
 

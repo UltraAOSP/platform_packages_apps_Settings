@@ -88,7 +88,14 @@
                 android:title="@string/firmware_version"
                 android:summary="@string/device_info_default"/>
 
-        <!-- AOSP-CAF Version  -->
+        <!-- AOST Version  -->
+        <Preference android:key="aost_version"
+                android:enabled="false"
+                android:shouldDisableView="false"
+                android:title="@string/aost_version_title"
+                android:summary="@string/aost_version_default"/>
+
+        <!-- CAF Version  -->
         <Preference android:key="caf_version"
                 android:enabled="false"
                 android:shouldDisableView="false"
