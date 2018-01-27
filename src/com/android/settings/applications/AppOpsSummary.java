@@ -1,6 +1,5 @@
 /**
  * Copyright (C) 2013 The Android Open Source Project
- * Copyright (C) 2016 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy
@@ -33,12 +32,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import com.android.settings.DevelopmentSettings;
 import com.android.settings.InstrumentedFragment;
 import com.android.settings.R;
 
@@ -116,20 +109,10 @@ public class AppOpsSummary extends InstrumentedFragment {
 
         mPageNames = getResources().getTextArray(R.array.app_ops_categories);
 
-        int defaultTab = -1;
-        Bundle bundle = getArguments();
-        if (bundle != null) {
-            defaultTab = Arrays.asList(mPageNames).indexOf(bundle.getString("appops_tab", ""));
-        }
-
         mViewPager = (ViewPager) rootView.findViewById(R.id.pager);
         MyPagerAdapter adapter = new MyPagerAdapter(getChildFragmentManager());
         mViewPager.setAdapter(adapter);
         mViewPager.setOnPageChangeListener(adapter);
-        if (defaultTab >= 0) {
-            mViewPager.setCurrentItem(defaultTab);
-        }
-        mViewPager.setOnPageChangeListener(mAdapter);
         PagerTabStrip tabs = (PagerTabStrip) rootView.findViewById(R.id.tabs);
 
         // HACK - https://code.google.com/p/android/issues/detail?id=213359
