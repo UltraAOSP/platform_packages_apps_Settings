@@ -24,10 +24,6 @@
     <string name="root_access_adb">ADB only</string>
     <string name="root_access_all">Apps and ADB</string>
 
-    <!-- Preference link for root appops -->
-    <string name="root_appops_title">Manage root accesses</string>
-    <string name="root_appops_summary">View and control the root rules</string>
-
     <!-- Memory -->
     <string name="memory_startup_apps_title">Apps started on boot</string>
 
